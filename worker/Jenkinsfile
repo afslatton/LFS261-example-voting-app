@@ -54,11 +54,11 @@ pipeline {
             def workerImage = docker.build("afslatton/worker:v${env.BUILD_ID}", "./worker")
                  workerImage.push()
                  workerImage.push("latest")
-                         }    
-               }                 
-            }        
+            }    
+          }                 
+        }        
       }
-
+   }
   post {
     always {
      
